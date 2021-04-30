@@ -1,0 +1,66 @@
+<style>
+    pop {
+        display: none;
+    }
+    .popbg {
+        z-index: 9;
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        background-color: black;
+        opacity: .5;
+    }
+    img.pop {
+        z-index: 10;
+        position: fixed;
+        top: 50%;left: 50%;
+        margin: 0;
+        padding: 0;
+        transform: translateX(-50%) translateY(-50%);
+        max-width: 100vw;
+        max-height: 90vh;
+        background-color: black;
+        border: 1px solid;
+        border-color: #c6b964;
+        border-radius: 5px;
+    }
+    img.sh {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    .content {
+        padding: 0;
+    }
+    .content-box {
+        display: inline-block;
+        border: 1px solid;
+        border-color: #c6b964;
+        margin: 20px;
+        width: 40%;
+    }
+    article {
+        margin: 0;
+    }
+    @media (max-width: 450px) {
+        .content-box {
+            width: 80%;
+        }
+	img.pop {
+	    max-height: 70vh;
+	}
+    }
+</style>
+<pop>
+	<div class="popbg"></div>
+	<img class="pop" src="">
+</pop>
+<div class="container">
+	<div class="content top bottom">
+		{% for x in medialist %}
+		<div class="content-box">
+			<article class="text-center">
+				<img src="{{ x }}" class="sh">
+			</article>
+		</div>
+		{% endfor %}
+	</div>
+</div>

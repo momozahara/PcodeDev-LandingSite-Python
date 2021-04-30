@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="content top bottom">
+		{% for i in rows %}
+		<div class="row">
+			<div class="col">
+				<div class="heading-1v2">
+					<span>{{ i }}</span>
+				</div>
+				{% if i == 'Official' %}
+				<article class="text-center">
+					<message>Something about official.
+				</article>
+				{% elif i == 'Informations' %}
+				{% for x in results %}
+				<article>
+					<date>{{ x['date'] }}</date><message>{{ x['message'] }}</message>
+				</article>
+				{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>

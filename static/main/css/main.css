@@ -1,0 +1,28 @@
+@font-face {
+  font-family: MC;
+  src: url(/static/media/font/Pixeled.ttf);
+}
+
+html,
+body {
+  min-height: 100vh
+}
+
+.MC {
+  font-family: MC !important;
+}
+
+.unc {
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.em-2 {
+  font-size: 2em !important;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
