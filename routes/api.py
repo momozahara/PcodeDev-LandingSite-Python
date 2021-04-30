@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort, redirect
+from flask import Blueprint, render_template, abort, redirect, jsonify
 
 api = Blueprint('api', 'api', template_folder='templates/api', static_folder='static/api', static_url_path='/static')
 
@@ -25,7 +25,7 @@ medialist = [
         '/static/official/media/keyvisual02.jpg'
 ]
 
-@api.route('/page/<id>/')
+@api.route('/page/<id>/', methods=['GET'])
 def Official(id):
         id = id.lower()
         if any(i == id for i in pages):
@@ -44,6 +44,11 @@ def Official(id):
         else:
                 return abort(404)
 
-@api.route('/github/')
+@api.route('/github/', methods=['GET'])
 def Github_redirect():
 	return redirect("https://github.com/momozahara")
+
+@api.route('/react/doc/', methods=['GET'])
+def React_Doc():
+	data = { "text": "Hello, World!" }
+	return  jsonify(data)
