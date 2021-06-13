@@ -8,7 +8,9 @@ function PlayBGM() {
     bgm.play();
     Logo.removeClass('pointer');
     Logo.unbind('click');
-    Logo.tooltip('hide');
+    Logo.attr("title", "NEW_TITLE")
+        .tooltip("fixTitle")
+    //Logo.tooltip('hide');
 };
 
 function LogoTooltip() {
