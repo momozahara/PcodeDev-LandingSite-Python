@@ -33,6 +33,8 @@ MEDIAS = [
 
 @main.route('/video/')
 def Video():
+	if request.args.get('watch') is not "":
+		return render_template('watch.html', name='Video title')
 	return render_template('video.html', name='Video')
 
 @main.after_request
