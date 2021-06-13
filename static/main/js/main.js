@@ -8,8 +8,13 @@ function PlayBGM() {
     bgm.play();
     Logo.removeClass('pointer');
     Logo.unbind('click');
-    $(".tooltip-inner").text("TEXT");
-    //Logo.tooltip('hide');
+    Logo.tooltip('hide');
+    Logo.tooltip({
+        container: '#Logo',
+        placement: 'right',
+        title: 'Playing おもちゃのダンス',
+        trigger: 'manual'
+    });
 };
 
 function LogoTooltip() {
