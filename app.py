@@ -3,8 +3,8 @@ from flask_minify import minify
 from routes import main, api
 
 app = Flask(__name__, subdomain_matching=True, template_folder="templates", static_folder=None, static_url_path=None)
-minify(app=app, html=True, js=True, cssless=True)
 app.config['SERVER_NAME'] = 'pcode.dev'
+minify(app=main, html=True, js=True, cssless=True)
 
 @app.errorhandler(404)
 def Error404(error):
