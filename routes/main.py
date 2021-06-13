@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, abort, redirect
+from htmlmin.minify import html_minify
 from datetime import datetime
 
 main = Blueprint('main', 'main', template_folder='templates/main', static_folder='static/main', static_url_path='/static')
@@ -51,4 +52,4 @@ def After_request(res):
 	for x in MEDIAS:
 		if request.path.find(x) > 0:
 			res.headers['Cache-Control'] = 'public, max-age=43200'
-	return res
+	return html_minify(res)
