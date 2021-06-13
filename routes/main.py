@@ -31,8 +31,8 @@ MEDIAS = [
 	'.mp3'
 ]
 
-@main.route('/video/')
-def Video():
+@main.route('/video/<id>/')
+def Video(id):
 	return render_template('video.html', name='Video')
 
 @main.after_request
