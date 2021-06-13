@@ -47,8 +47,3 @@ def Official(id):
 @api.route('/github/', methods=['GET'])
 def Github_redirect():
 	return redirect("https://github.com/momozahara")
-
-@api.route('/react/doc/', methods=['GET'])
-def React_Doc():
-	data = { "text": "Hello, World!" }
-	return  jsonify(data)
