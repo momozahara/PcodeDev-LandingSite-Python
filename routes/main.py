@@ -27,18 +27,17 @@ def Official_path(path):
 
 @main.route('/video/')
 def Video():
-	if request.args.get('watch') != None:
-		watch = request.args.get('watch')
-		if watch == "":
-			return redirect("/video/");
-		args = {
-			"title": watch,
-			"desc": {
-				"uploader": "Uploader"
-			}
-		}
-		return render_template('watch.html', name='Video title', **args)
 	return render_template('video.html', name='Video')
+
+@main.route('/video/<ID>')
+def Video_ID(ID):
+	args = {
+		"title": ID,
+		"desc": {
+			"uploader": "Uploader"
+		}
+	}
+	return render_template('watch.html', name='Video title', **args)
 
 @main.after_request
 def After_request(res):
