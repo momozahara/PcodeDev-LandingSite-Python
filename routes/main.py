@@ -52,5 +52,5 @@ def After_request(res):
 	for x in MEDIAS:
 		if request.path.find(x) > 0:
 			res.headers['Cache-Control'] = 'public, max-age=43200'
-	res.data = html_minify(res.data)
+	res.set_data(html_minify(res.get_data()))
 	return res
