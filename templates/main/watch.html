@@ -6,16 +6,14 @@
         <div class="d-block text-center p-4 rounded" style="background: white;">
             <p class="unc">Video Embed</p>
             <p id="title"></p>
-            <p class="mb-0">etc.</p>
+            <p id="desc" class="mb-0"></p>
         </div>
     </div>
 {% include "_footer.script.html" %}
     <script>
-        const t = "{{ title }}";
-        const t_id = $("#title");
-
         $(document).ready(function() {
-            t_id.text(t);
+            $("#title").text("{{ title }}");
+            $("#desc").text("{{ desc }}");
         });
     </script>
 </body>

@@ -36,7 +36,8 @@ def Video():
 	if request.args.get('watch') != None:
 		watch = request.args.get('watch')
 		args = {
-			"title": watch
+			"title": watch,
+			"decs": "etc."
 		}
 		return render_template('watch.html', name='Video title', **args)
 	return render_template('video.html', name='Video')
