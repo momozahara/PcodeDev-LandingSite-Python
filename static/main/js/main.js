@@ -8,8 +8,12 @@ function PlayBGM() {
     bgm.play();
     Logo.removeClass('pointer');
     Logo.unbind('click');
-    Logo.attr("title", "NEW_TITLE")
-        .tooltip("fixTitle")
+    Logo.tooltip({
+        container: '#Logo',
+        placement: 'right',
+        title: 'Run()',
+        trigger: 'manual'
+    });
     //Logo.tooltip('hide');
 };
 
