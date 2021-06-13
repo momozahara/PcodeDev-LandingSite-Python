@@ -6,7 +6,7 @@ app.config['SERVER_NAME'] = 'pcode.dev'
 
 @app.errorhandler(404)
 def Error404(error):
-	return render_template("home.html"), 404
+	return render_template("404.html"), 404
 
 app.register_blueprint(main)
 app.register_blueprint(main, subdomain='www')
