@@ -1,3 +1,4 @@
+<style>
 @font-face {
   font-family: MC;
   src: url(/static/media/font/Pixeled.ttf);
@@ -33,3 +34,4 @@ body {
 .pointer:hover {
   cursor: pointer;
 }
+</style>
