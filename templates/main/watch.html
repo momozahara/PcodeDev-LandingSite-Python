@@ -14,7 +14,9 @@
         const t = "{{ title }}";
         const t_id = $("#title");
 
-        t_id.text(t);
+        $(document).ready(function() {
+            t_id.text(t);
+        });
     </script>
 </body>
 </html>
