@@ -1,0 +1,41 @@
+body {
+    background-color: var(--bg-main) !important;
+    color: white !important;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: inherit;
+    cursor: pointer;
+}
+a.t-2s-ei {
+    -moz-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+mark {
+    background-color: var(--bg-mark);
+}
+.bg-card {
+    background-color: var(--bg-card) !important;
+}
+.text-desc {
+    color: var(--text-desc);
+}
+.unc {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;  
+}
+:root {
+    --bg-main: rgb(24, 24, 24);
+    --bg-card: rgba(33, 33, 33, 0.98);
+    --bg-mark: rgb(43, 43, 43);
+
+    --text-desc: rgb(170, 170, 170);
+}
