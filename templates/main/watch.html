@@ -6,14 +6,14 @@
         <div class="d-block text-center p-4 rounded-2 bg-card">
             <p class="h4 unc"><mark class="rounded-1 text-desc">Video Embed</mark></p>
             <p id="title" class="h5 fw-bold"></p>
-            <p id="desc" class="mb-0 text-desc"></p>
+            <p id="desc_uploader" class="mb-0 text-desc"></p>
         </div>
     </div>
 {% include "_video.footer.script.html" %}
     <script>
         $(document).ready(function() {
             $("#title").text("{{ title }}_title");
-            $("#desc").text("{{ desc }}");
+            $("#desc_uploader").text("{{ desc.uploader }}");
         });
     </script>
 </body>

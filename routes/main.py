@@ -33,7 +33,9 @@ def Video():
 			return redirect("/video/");
 		args = {
 			"title": watch,
-			"desc": "etc."
+			"desc": {
+				"uploader": "user"
+			}
 		}
 		return render_template('watch.html', name='Video title', **args)
 	return render_template('video.html', name='Video')
