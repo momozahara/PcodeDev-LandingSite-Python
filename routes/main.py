@@ -25,12 +25,6 @@ def Official_path(path):
 	else:
 		return abort(404)
 
-MEDIAS = [
-	'.png',
-	'.jpg',
-	'.mp3'
-]
-
 @main.route('/video/')
 def Video():
 	if request.args.get('watch') != None:
@@ -48,6 +42,11 @@ def Video():
 def After_request(res):
 	res.headers['Access-Control-Allow-Origin'] = '*'
 	res.headers['Cache-Control'] = 'no-cache'
+	MEDIAS = [
+		'.png',
+		'.jpg',
+		'.mp3'
+	]
 	for x in MEDIAS:
 		if request.path.find(x) > 0:
 			res.headers['Cache-Control'] = 'public, max-age=43200'
