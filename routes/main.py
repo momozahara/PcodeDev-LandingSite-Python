@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, abort, redirect
-from htmlmin.minify import html_minify
 from datetime import datetime
 
 main = Blueprint('main', 'main', template_folder='templates/main', static_folder='static/main', static_url_path='/static')
