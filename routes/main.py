@@ -29,7 +29,7 @@ def Official_path(path):
 def Video():
 	return render_template('video.html', name='Video')
 
-@main.route('/video/<ID>')
+@main.route('/video/<ID>/')
 def Video_ID(ID):
 	args = {
 		"title": ID,
