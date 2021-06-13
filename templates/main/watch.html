@@ -5,10 +5,16 @@
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="d-block text-center p-4 rounded" style="background: white;">
             <p class="unc">Video Embed</p>
-            <p>{{ title }}</p>
+            <p id="title"></p>
             <p class="mb-0">etc.</p>
         </div>
     </div>
 {% include "_footer.script.html" %}
+    <script>
+        const t = "{{ title }}";
+        const t_id = $("#title");
+
+        t_id.text(t);
+    </script>
 </body>
 </html>
