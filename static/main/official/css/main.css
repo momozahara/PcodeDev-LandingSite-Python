@@ -95,12 +95,6 @@ date {
     -ms-user-select: none;
     -webkit-user-select: none;
 }
-.c {
-    user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    -webkit-user-select: text;
-}
 menu {
     margin: 10px 0;
     padding: 0;
