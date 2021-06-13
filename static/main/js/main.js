@@ -7,7 +7,7 @@ const Logo = $('#Logo');
 function PlayBGM() {
     Logo.removeClass('pointer');
     Logo.unbind('click');
-    Logo.tooltip('hide');
+    Logo.tooltip('dispose');
     Logo.tooltip({
         container: '#Logo',
         placement: 'right',
