@@ -11,9 +11,13 @@
     </div>
 {% include "_video.footer.script.html" %}
     <script>
+        const title = "{{ title }}_title";
+        const desc_uploader = "{{ desc.uploader }}";
+    </script>
+    <script>
         $(document).ready(function() {
-            $("#title").text("{{ title }}_title");
-            $("#desc_uploader").text("{{ desc.uploader }}");
+            $("#title").text(title);
+            $("#desc_uploader").text(desc_uploader);
         });
     </script>
 </body>
