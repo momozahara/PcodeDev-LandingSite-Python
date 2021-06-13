@@ -5,7 +5,6 @@ const bgm = new Audio('/static/media/bgm/おもちゃのダンス.mp3');
 const Logo = $('#Logo');
 
 function PlayBGM() {
-    bgm.play();
     Logo.removeClass('pointer');
     Logo.unbind('click');
     Logo.tooltip('hide');
@@ -15,6 +14,10 @@ function PlayBGM() {
         title: 'Playing おもちゃのダンス',
         trigger: 'manual'
     });
+    setTimeout(function() {
+        Logo.tooltip('show');
+        bgm.play();
+    }, 100);
 };
 
 function LogoTooltip() {
