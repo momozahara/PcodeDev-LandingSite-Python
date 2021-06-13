@@ -37,7 +37,7 @@ def Video_ID(ID):
 			"uploader": "Uploader"
 		}
 	}
-	return render_template('watch.html', name="{ID}_title", **args)
+	return render_template('watch.html', name=f"{ID}_title", **args)
 
 @main.after_request
 def After_request(res):
