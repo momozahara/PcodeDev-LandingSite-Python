@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, abort
+from flask import Blueprint, render_template, request, abort, redirect
 from datetime import datetime
 
 main = Blueprint('main', 'main', template_folder='templates/main', static_folder='static/main', static_url_path='/static')
@@ -35,6 +35,8 @@ MEDIAS = [
 def Video():
 	if request.args.get('watch') != None:
 		watch = request.args.get('watch')
+		if watch == "":
+			return redirect("/video/");
 		args = {
 			"title": watch,
 			"desc": "etc."
