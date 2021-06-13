@@ -31,6 +31,10 @@ MEDIAS = [
 	'.mp3'
 ]
 
+@main.route('/video/')
+def Video():
+	return render_template('video.html', name='Video')
+
 @main.after_request
 def After_request(res):
 	res.headers['Access-Control-Allow-Origin'] = '*'
