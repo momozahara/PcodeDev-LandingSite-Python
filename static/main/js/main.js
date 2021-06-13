@@ -17,7 +17,7 @@ function PlayBGM() {
     setTimeout(function() {
         Logo.tooltip('show');
         bgm.play();
-    }, 100);
+    }, 1000);
 };
 
 function LogoTooltip() {
