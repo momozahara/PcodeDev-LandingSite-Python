@@ -28,7 +28,7 @@ def Official_path(path):
 
 @main.route('/video/')
 def Video():
-	return html_minify(render_template('video.html', name='Video'))
+	return render_template('video.html', name='Video')
 
 @main.route('/video/<ID>/')
 def Video_ID(ID):
@@ -38,7 +38,7 @@ def Video_ID(ID):
 			"uploader": "Uploader"
 		}
 	}
-	return html_minify(render_template('watch.html', name='Video title', **args))
+	return render_template('watch.html', name='Video title', **args)
 
 @main.after_request
 def After_request(res):
@@ -52,4 +52,5 @@ def After_request(res):
 	for x in MEDIAS:
 		if request.path.find(x) > 0:
 			res.headers['Cache-Control'] = 'public, max-age=43200'
+	res.data = html_minify(res.data)
 	return res
