@@ -34,7 +34,7 @@ def Video():
 		args = {
 			"title": watch,
 			"desc": {
-				"uploader": "user"
+				"uploader": "Uploader"
 			}
 		}
 		return render_template('watch.html', name='Video title', **args)
