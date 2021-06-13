@@ -8,12 +8,7 @@ function PlayBGM() {
     bgm.play();
     Logo.removeClass('pointer');
     Logo.unbind('click');
-    Logo.tooltip({
-        container: '#Logo',
-        placement: 'right',
-        title: 'Run()',
-        trigger: 'manual'
-    });
+    $(".tooltip-inner").text("TEXT");
     //Logo.tooltip('hide');
 };
 
