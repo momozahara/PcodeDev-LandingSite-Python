@@ -18,5 +18,5 @@
 
 #### run
 
-    $ gunicorn -c config.py main:app
+    $ gunicorn -c config.py app:app
 
