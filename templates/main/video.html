@@ -1,19 +1,12 @@
-{% include "_layout.html" %}
-
-<style>
-    body {
-        background: #101010;
-    }
-    .unc {
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;  
-    }
-</style>
-<div class="vh-100 d-flex justify-content-center align-items-center">
-    <div class="d-block text-center p-4 rounded" style="background: white;">
-        <p class="unc mb-0">Video Home Page</p>
+<!DOCTYPE html>
+<html lang="en">
+{% include "_header.html" %}
+<body>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="d-block text-center p-4 rounded" style="background: white;">
+            <p class="unc mb-0">Video Home Page</p>
+        </div>
     </div>
-</div>
+    {% include "_footer.script.html" %}
+</body>
+</html>
