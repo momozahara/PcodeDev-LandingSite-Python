@@ -20,6 +20,9 @@ mark {
     padding: .2em .8em;
     background-color: var(--bg-mark);
 }
+.bg-main {
+    background-color: var(--bg-main) !important;
+}
 .bg-card {
     background-color: var(--bg-card) !important;
 }
