@@ -17,6 +17,7 @@ a.t-2s-ei {
     transition: all .2s ease-in;
 }
 mark {
+    padding: .2em .8em;
     background-color: var(--bg-mark);
 }
 .bg-card {
