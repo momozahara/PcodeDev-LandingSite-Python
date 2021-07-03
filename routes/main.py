@@ -11,6 +11,10 @@ def TimeNow():
 def Home():
 	return render_template('home.html')
 
+@main.route('/git/')
+def Github():
+	return redirect('https://github.com/momozahara')
+
 MENUTPATH = ['profile', 'blog', 'media']
 
 @main.route('/official/')
