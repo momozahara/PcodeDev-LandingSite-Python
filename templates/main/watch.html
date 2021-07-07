@@ -18,17 +18,16 @@
     <script>
         $(document).ready(function() {
             $("#desc_uploader").text(desc_uploader);
-            $('<iframe />');
-            $('<iframe />', {
-                id: "Embed",
+            var a =$('<iframe />');
+            $(a, {
+                id: "PP",
                 width: 560,
                 height: 315,
                 src: "https://www.youtube.com/embed/{{ vid }}",
                 title: "YouTube video player",
                 frameborder: 0,
-                allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-                allowfullscreen
-            }).appendTo('#embed');
+                allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            }).attr("allowfullscreen").appendTo('#embed');
         });
     </script>
 </body>
