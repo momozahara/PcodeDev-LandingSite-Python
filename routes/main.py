@@ -36,12 +36,12 @@ def Video():
 @main.route('/video/<ID>/')
 def Video_ID(ID):
 	args = {
-		"title": ID,
+		"vid": ID,
 		"desc": {
-			"uploader": "Uploader"
+			"uploader": "Youtube"
 		}
 	}
-	return render_template('watch.html', name=f"{ID}_title", **args)
+	return render_template('watch.html', name=f"{ID}", **args)
 
 @main.after_request
 def After_request(res):
