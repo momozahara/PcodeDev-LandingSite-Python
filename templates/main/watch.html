@@ -4,8 +4,9 @@
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="d-block text-center p-4 rounded-2 bg-card">
-            <p class="h4 unc"><mark id="t" class="rounded-1 text-desc bg-main">Video Embed</mark></p>
-            
+            <p class="h4 unc">
+                <!--<mark class="rounded-1 text-desc bg-main">Video Embed</mark>-->
+            </p>
             <!--<p id="title" class="h5 mt-4 fw-bold"></p>-->
             <a id="desc_uploader" class="text-desc t-2s-ei"></a>
         </div>
@@ -20,10 +21,11 @@
             //$("p.h4.unc")[0].append("<iframe id=\"Embed\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/{{ vid }}\" title=\"YouTube video playe\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>");
             $('<iframe />');  // Create an iframe element
             $('<iframe />', {
-                id: 'Embed',
-                width: '560',
-                height: '315',
-                src: 'https://www.youtube.com/embed/{{ vid }}'
+                id: "Embed",
+                width: 560,
+                height: 315,
+                src: "https://www.youtube.com/embed/{{ vid }}",
+                frameborder: 0,
             }).appendTo('#t');
         });
     </script>
