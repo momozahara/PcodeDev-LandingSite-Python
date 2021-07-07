@@ -20,7 +20,7 @@
             $("#title").text(title);
             $("#desc_uploader").text(desc_uploader);
 
-            $("#Embed").load(function() {
+            $("#Embed").on("load", function() {
                 console.log("GG");
 
                 var iBody = $("#Embed").contents().find("body");
