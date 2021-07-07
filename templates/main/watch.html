@@ -27,7 +27,9 @@
                 title: "YouTube video player",
                 frameborder: 0,
                 allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            }).attr("allowfullscreen").appendTo('#embed');
+            });
+            a.attr("allowfullscreen");
+            a.appendTo('#embed');
         });
     </script>
 </body>
