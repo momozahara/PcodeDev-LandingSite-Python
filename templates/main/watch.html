@@ -14,18 +14,21 @@
             height: 420px;
         }
     }
+
     @media only screen and (max-width: 750px) {
         #PP {
             width: 560px;
             height: 315px;
         }
     }
+
     @media only screen and (max-width: 600px) {
         #PP {
             width: 373px;
             height: 210px;
         }
     }
+
     @media only screen and (max-width: 420px) {
         #PP {
             width: 300px;
@@ -33,6 +36,7 @@
         }
     }
 </style>
+
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="d-block text-center p-4 rounded-2 bg-card">
@@ -43,12 +47,12 @@
             <a id="desc_uploader" class="text-desc t-2s-ei"></a>
         </div>
     </div>
-{% include "_video.footer.script.html" %}
+    {% include "_video.footer.script.html" %}
     <script>
         const desc_uploader = "{{ desc.uploader }}";
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#desc_uploader").text(desc_uploader);
             $('<iframe />');
             $('<iframe />', {
@@ -62,4 +66,5 @@
         });
     </script>
 </body>
+
 </html>
