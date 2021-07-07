@@ -5,7 +5,7 @@
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="d-block text-center p-4 rounded-2 bg-card">
             <!--<p class="h4 unc"><mark class="rounded-1 text-desc bg-main">Video Embed</mark></p>-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ vid }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="Embed" width="560" height="315" src="https://www.youtube.com/embed/{{ vid }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p id="title" class="h5 mt-4 fw-bold"></p>
             <a id="desc_uploader" class="text-desc t-2s-ei"></a>
         </div>
@@ -20,9 +20,11 @@
             $("#title").text(title);
             $("#desc_uploader").text(desc_uploader);
 
-            const test = $("a.ytp-title-link.yt-uix-sessionlink");
-
-            console.log(test.text());
+            $("#Embed").load(function() {
+                const test = $("a.ytp-title-link.yt-uix-sessionlink");
+                console.log(test.text());
+            });
+            
         });
     </script>
 </body>
