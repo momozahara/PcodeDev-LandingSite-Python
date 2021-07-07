@@ -19,10 +19,17 @@
         $(document).ready(function() {
             $("#title").text(title);
             $("#desc_uploader").text(desc_uploader);
-            $("iframe").load(function() {
+
+            $("#Embed").load(function () {
+                console.log("GG");
+            });
+
+            /*
+            $("iframe").(function() {
                 const test = $("a.ytp-title-link.yt-uix-sessionlink");
                 console.log(test.text());
             });
+            */
         });
     </script>
 </body>
