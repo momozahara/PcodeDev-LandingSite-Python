@@ -20,11 +20,14 @@
             $("#title").text(title);
             $("#desc_uploader").text(desc_uploader);
 
-            const yourFrame = document.getElementById('Embed'); 
-            yourFrame.addEventListener("load", function() { 
+            $("#Embed").load(function() {
                 console.log("GG");
-                const test = $("#Embed");
-                console.log(test.text());
+
+                var iBody = $("#Embed").contents().find("body");
+
+                var t = iBody.find(".ytp-title-link.yt-uix-sessionlink").val();
+
+                console.log(t);
             });
         });
     </script>
