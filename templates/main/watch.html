@@ -20,7 +20,8 @@
             $("#title").text(title);
             $("#desc_uploader").text(desc_uploader);
 
-            $("#Embed").load(function () {
+            var yourFrame = document.getElementById('Embed'); 
+            yourFrame.addEventListener("load", function() { 
                 console.log("GG");
             });
 
