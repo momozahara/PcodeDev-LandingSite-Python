@@ -2,6 +2,19 @@
 <!-- Objective of this website is to put on resume -->
 <html lang="en">
 {% include "_video.header.html" %}
+<style>
+    #PP {
+        width: 1120px;
+        height: 630px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #PP {
+            width: 560px;
+            height: 315px;
+        }
+    }
+</style>
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="d-block text-center p-4 rounded-2 bg-card">
@@ -22,8 +35,6 @@
             $('<iframe />');
             $('<iframe />', {
                 id: "PP",
-                width: 1120,
-                height: 630,
                 src: "https://www.youtube.com/embed/{{ vid }}",
                 title: "YouTube video player",
                 frameborder: 0,
