@@ -68,9 +68,9 @@ def GetTitle(id):
 
         returnJson = {
                 "items": {
-                        "channelTitle": data["items"]["snippet"]["channelTitle"],
-                        "channelId": data["items"]["snippet"]["channelId"],
-                        "title": data["items"]["snippet"]["title"]
+                        "channelTitle": data["items"][0]["snippet"]["channelTitle"],
+                        "channelId": data["items"][0]["snippet"]["channelId"],
+                        "title": data["items"][0]["snippet"]["title"]
                 }
         }
 
