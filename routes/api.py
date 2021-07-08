@@ -50,7 +50,7 @@ def Official(id):
 def Github_redirect():
 	return redirect("https://github.com/momozahara")
 
-@api.route('/GetTitle/<id>')
+@api.route('/get/v/data/<id>')
 def GetTitle(id):
         key = base64.b64decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
 

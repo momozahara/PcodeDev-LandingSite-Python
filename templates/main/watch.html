@@ -54,8 +54,6 @@
     </script>
     <script>
         $(document).ready(function () {
-            desc_uploader.text("{{ desc.uploader }}");
-            desc_uploader.attr("href", "https://youtu.be/{{ vid }}")
             $('<iframe />', {
                 id: "PP",
                 src: "https://www.youtube.com/embed/{{ vid }}",
@@ -64,6 +62,11 @@
                 allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
                 allowfullscreen: true
             }).appendTo('#embed');
+            $.getJSON("https://api.pcode.dev/get/v/data/{{ vid }}", function (data) {
+                desc_uploader.attr("href", "https://www.youtube.com/channel/" + data.channelId);
+                desc_uploader.text(data.channelTitle);
+                $(document).prop("title", document.title.replace("{{ vid }}", data.title));
+            });
         });
     </script>
 </body>
