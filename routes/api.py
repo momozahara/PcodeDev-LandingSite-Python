@@ -64,6 +64,4 @@ def GetTitle(id):
 
         results = requests.get(url, params=dict)
 
-        print(results)
-
-        return "GG"
+        return jsonify(results.json())
