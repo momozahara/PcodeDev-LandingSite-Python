@@ -52,7 +52,7 @@ def Github_redirect():
 
 @api.route('/GetTitle/<id>')
 def GetTitle(id):
-        key = base64.decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
+        key = base64.b64decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
 
         url = "https://www.googleapis.com/youtube/v3/videos"
         
