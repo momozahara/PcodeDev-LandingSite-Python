@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, abort, redirect, jsonify
+import base64
+import requests
 
 api = Blueprint('api', 'api', template_folder='templates/api', static_folder='static/api', static_url_path='/static')
 
@@ -47,3 +49,21 @@ def Official(id):
 @api.route('/github/', methods=['GET'])
 def Github_redirect():
 	return redirect("https://github.com/momozahara")
+
+@api.route('/GetTitle/<id>')
+def GetTitle(id):
+        key = base64.decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
+
+        url = "https://www.googleapis.com/youtube/v3/videos"
+        
+        dict = {
+                "key": key,
+                "part": "snippet",
+                "id": id
+        }
+
+        results = requests.get(url, params=dict)
+
+        print(results["items"]["snippet"]["title"])
+
+        return f"{results['items']['snippet']['title']}"
