@@ -60,7 +60,8 @@ def GetTitle(id):
                 "id": id
         }
         results = requests.get(url, params=dict)
-        if results.json() != None:
+
+        try:
                 data = results.json()
                 returnJson = {
                         "items": {
@@ -69,8 +70,7 @@ def GetTitle(id):
                                 "title": data["items"][0]["snippet"]["title"]
                         }
                 }
-                return jsonify(returnJson)
-        else:
+        except:
                 returnJson = {
                         "items": {
                                 "channelTitle": "",
@@ -79,4 +79,4 @@ def GetTitle(id):
                         }
                 }
 
-                return jsonify(returnJson)
+        return jsonify(returnJson)
