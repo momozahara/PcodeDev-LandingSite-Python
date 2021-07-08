@@ -64,8 +64,6 @@ def GetTitle(id):
 
         results = requests.get(url, params=dict)
 
-        title = results["items"]["snippet"]["title"]
-
-        print(title)
+        print(results)
 
         return "GG"
