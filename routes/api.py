@@ -64,4 +64,14 @@ def GetTitle(id):
 
         results = requests.get(url, params=dict)
 
-        return jsonify(results.json())
+        data = results.json()
+
+        returnJson = {
+                "items": {
+                        "channelTitle": data["items"]["snippet"]["channelTitle"],
+                        "channelId": data["items"]["snippet"]["channelId"],
+                        "title": data["items"]["snippet"]["title"]
+                }
+        }
+
+        return jsonify(returnJson)
