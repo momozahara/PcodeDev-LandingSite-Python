@@ -60,7 +60,7 @@ def GetTitle(id):
                 "id": id
         }
         results = requests.get(url, params=dict)
-        if results != None:
+        if results.json() != None:
                 data = results.json()
                 returnJson = {
                         "items": {
