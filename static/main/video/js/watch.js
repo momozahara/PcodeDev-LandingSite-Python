@@ -10,6 +10,6 @@ $(document).ready(function () {
     $.getJSON("https://api.pcode.dev/get/ytb/v/data/" + vid, function (data) {
         desc_uploader.attr("href", "https://www.youtube.com/channel/" + data.items.channelId);
         desc_uploader.text(data.items.channelTitle);
-        $(document).prop("title", document.title.replace("{{ vid }}", data.items.title));
+        $(document).prop("title", document.title.replace(vid, data.items.title));
     });
 });
