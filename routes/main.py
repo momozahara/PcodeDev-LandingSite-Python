@@ -37,7 +37,6 @@ def Video():
 def Video_ID(ID):
 	args = {
 		"vid": ID
-		}
 	}
 	return render_template('watch.html', name=f"{ID}", **args)
 
