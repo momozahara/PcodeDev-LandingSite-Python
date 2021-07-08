@@ -53,25 +53,30 @@ def Github_redirect():
 @api.route('/get/v/data/<id>')
 def GetTitle(id):
         key = base64.b64decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
-
         url = "https://www.googleapis.com/youtube/v3/videos"
-        
         dict = {
                 "key": key,
                 "part": "snippet",
                 "id": id
         }
-
         results = requests.get(url, params=dict)
-
-        data = results.json()
-
-        returnJson = {
-                "items": {
-                        "channelTitle": data["items"][0]["snippet"]["channelTitle"],
-                        "channelId": data["items"][0]["snippet"]["channelId"],
-                        "title": data["items"][0]["snippet"]["title"]
+        if results != None:
+                data = results.json()
+                returnJson = {
+                        "items": {
+                                "channelTitle": data["items"][0]["snippet"]["channelTitle"],
+                                "channelId": data["items"][0]["snippet"]["channelId"],
+                                "title": data["items"][0]["snippet"]["title"]
+                        }
                 }
-        }
+                return jsonify(returnJson)
+        else:
+                returnJson = {
+                        "items": {
+                                "channelTitle": "",
+                                "channelId": "",
+                                "title": ""
+                        }
+                }
 
-        return jsonify(returnJson)
+                return jsonify(returnJson)
