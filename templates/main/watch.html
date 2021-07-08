@@ -56,8 +56,7 @@
         $(document).ready(function () {
             desc_uploader.text("{{ desc.uploader }}");
             desc_uploader.attr("href", "https://youtu.be/{{ vid }}")
-            const PP = $('<iframe />');
-            $(PP, {
+            $('<iframe />', {
                 id: "PP",
                 src: "https://www.youtube.com/embed/{{ vid }}",
                 title: "YouTube video player",
