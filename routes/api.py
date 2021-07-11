@@ -51,7 +51,7 @@ def Github_redirect():
 	return redirect("https://github.com/momozahara")
 
 @api.route('/get/ytb/v/data/<id>')
-def GetTitle(id):
+def GetVData(id):
         key = base64.b64decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
         url = "https://www.googleapis.com/youtube/v3/videos"
         dict = {
@@ -80,3 +80,16 @@ def GetTitle(id):
                 }
 
         return jsonify(returnJson)
+
+@api.route('/debug/get/ytb/v/data/<id>')
+def DebugGetVData(id):
+        key = base64.b64decode("QUl6YVN5QjBRNGdUaG1zMkp0LTZTZ01ZajR1ZFlLZlZmWE5zcmNj");
+        url = "https://www.googleapis.com/youtube/v3/videos"
+        dict = {
+                "key": key,
+                "part": "snippet",
+                "id": id
+        }
+        results = requests.get(url, params=dict)
+
+        return jsonify(results.json())
